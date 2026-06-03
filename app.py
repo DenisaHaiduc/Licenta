@@ -47,7 +47,7 @@ def simuleaza_fbm(n, H):
 
 # --- 2. INIȚIALIZARE DASH ---
 app = dash.Dash(__name__)
-
+server = app.server 
 # --- 3. INTERFAȚA (HTML) ---
 app.layout = html.Div(className='container', children=[
     
