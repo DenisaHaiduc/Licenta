@@ -1,0 +1,182 @@
+/* Fundal general - Deep Space */
+body {
+    background-color: #020617; 
+    color: #f8fafc;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Containerul principal cu padding pentru efectul de "plutire" */
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+/* Sidebar Plutitor - Glassmorphism */
+.sidebar {
+    width: 300px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 24px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Conținutul din dreapta */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Titluri cu gradient Cyberpunk */
+h1, h2 {
+    background: linear-gradient(90deg, #00fff2, #bc13fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* Etichete */
+label {
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+    display: block;
+}
+
+/* Cutiuțele de metrice (Floating Cards) */
+.metrics-row {
+    display: flex;
+    gap: 20px;
+}
+
+.metric-box {
+    flex: 1;
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(0, 255, 242, 0.1);
+    transition: all 0.3s ease;
+}
+
+.metric-box:hover {
+    transform: translateY(-5px);
+    border-color: #00fff2;
+    box-shadow: 0 10px 30px rgba(0, 255, 242, 0.1);
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+/* Cardul pentru Grafic */
+.graph-container {
+    flex-grow: 1;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 24px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Ajustări pentru componentele Dash (Dropdown, DatePicker) */
+.Select-control, .DateInput_input, .SingleDatePickerInput__with-border {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border-radius: 8px !important;
+}
+
+.is-open > .Select-control {
+    background-color: #1e293b !important;
+}
+
+.virtualized-select {
+    color: black; /* Textul opțiunilor rămâne vizibil */
+}
+
+/* Container pentru selecția timpului */
+.time-selector-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Quick Select Buttons (Segmented Control) */
+.radio-group .form-check {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Stil pentru Dropdown-ul de perioade */
+.period-dropdown .Select-control {
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid #00fff2 !important;
+    box-shadow: 0 0 10px rgba(0, 255, 242, 0.2);
+    border-radius: 10px !important;
+}
+
+/* Stil pentru Input-urile de dată tip Text (aspect futurist) */
+.date-input-field {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #bc13fe;
+    color: #00fff2;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.date-input-field:focus {
+    border-bottom-color: #00fff2;
+    transition: 0.3s;
+}
+/* Fix pentru textul de sub Slider (Marks) */
+.rc-slider-mark-text {
+    color: #94a3b8 !important; /* Un gri deschis care se vede pe fundal negru */
+    font-size: 11px !important;
+    top: 25px !important; /* Îl coborâm puțin să nu se suprapună cu linia */
+}
+
+.rc-slider-mark-text-active {
+    color: #00fff2 !important; /* Cyan pentru marcajul activ */
+}
+
+/* Fix pentru etichetele albe din Dropdown care nu se vedeau bine */
+.Select-value-label, .Select-placeholder {
+    color: #e2e8f0 !important;
+}
+
+/* Opțiunile din interiorul listei Dropdown să fie negre pentru contrast când e deschis */
+.VirtualizedSelectOption {
+    color: #000 !important;
+    background-color: #fff !important;
+}
